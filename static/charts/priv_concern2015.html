@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+	<head>
+		<title>Privacy paradox in EU</title>
+
+		<!-- DO NOT DO THIS IN PRODUCTION -->
+		<!-- github.io and json-stat.org ARE NOT CDNs -->
+<link href="./js/visual.css" rel="stylesheet" type="text/css" />
+		<script src="https://json-stat.org/lib/json-stat.js"></script>
+		<script src="./js/lasyvisual.js"></script>
+		<!-- /DO NOT DO THIS IN PRODUCTION -->
+	</head>
+
+
+<body>
+		<div id="visual" class="visual"></div>
+		<script>
+			visual(
+				{
+					lang: "en", //Default language is Catalan ("ca"). Set in visual.setup.js
+					// title: "CMAP example",
+					// geo: "European Union (28)",
+					// time: "2003",
+					unit: {symbol: "%"},
+					legend: true,
+					dec: 1, //Number of decimal positions of the data.
+					by: "eu28", //Required if type: "cmap". Area unit of the data and map.
+					type: "cmap",
+					data: [{id: 'CY', val: 76},{id: 'EE', val: 38},{id: 'LT', val: 56},{id: 'BG', val: 76},{id: 'RO', val: 56},{id: 'LU', val: 73},{id: 'SI', val: 56},{id: 'HR', val: 70}, {id: 'AT', val: 60}, {id: 'BE', val: 74}, {id: 'CZ', val: 76}, {id: 'DE', val: 68}, {id: 'DK', val: 57}, {id: 'EL', val: 72}, {id: 'ES', val: 66}, {id: 'FI', val: 62}, {id: 'FR', val: 67}, {id: 'HU', val: 56}, {id: 'IE', val: 79}, {id: 'IT', val: 67}, {id: 'LV', val: 58}, {id: 'NL', val: 47}, {id: 'PL', val: 72}, {id: 'PT', val: 79}, {id: 'SE', val: 41}, {id: 'SK', val: 68}, {id: 'UK', val: 79}]
+				}
+			);
+		</script>
+</body>
+
+</html>
