@@ -1,0 +1,116 @@
+<!-- Styles -->
+<style>
+#chartdiv {
+  width: 100%;
+  height: 800px;
+  font-family: Arial;
+}
+
+</style>
+
+<!-- Resources -->
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+<!-- Chart code -->
+<script>
+am4core.ready(function() {
+
+// Themes begin
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+var chart = am4core.create("chartdiv", am4charts.XYChart);
+chart.padding(40, 40, 40, 40);
+
+var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+categoryAxis.renderer.grid.template.location = 0;
+categoryAxis.dataFields.category = "network";
+categoryAxis.renderer.minGridDistance = 1;
+categoryAxis.renderer.inversed = true;
+categoryAxis.renderer.grid.template.disabled = true;
+
+var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
+valueAxis.min = 0;
+
+var series = chart.series.push(new am4charts.ColumnSeries());
+series.dataFields.categoryY = "network";
+series.dataFields.valueX = "MAU";
+// series.tooltipText = "{valueX.value}";
+series.columns.template.tooltipText = "{valueX.value}";
+series.columns.template.fillOpacity = .8;
+series.columns.template.strokeOpacity = 0;
+series.columns.template.column.cornerRadiusBottomRight = 5;
+series.columns.template.column.cornerRadiusTopRight = 5;
+
+var labelBullet = series.bullets.push(new am4charts.LabelBullet())
+labelBullet.label.horizontalCenter = "left";
+labelBullet.label.dx = 10;
+labelBullet.label.text = "{values.valueX.workingValue.formatNumber('#.0as')}";
+labelBullet.locationX = 1;
+
+// as by default columns of the same series are of the same color, we add adapter which takes colors from chart.colors color set
+series.columns.template.adapter.add("fill", function(fill, target){
+  return chart.colors.getIndex(target.dataItem.index);
+});
+
+categoryAxis.sortBySeries = series;
+chart.data = [
+{ "network": "1997",
+"MAU": 5.0},
+{ "network": "1998",
+"MAU": 9.0},
+{ "network": "1999",
+"MAU": 17.0},
+{ "network": "2000",
+"MAU": 50.0},
+{ "network": "2001",
+"MAU": 42.0},
+{ "network": "2002",
+"MAU": 45.0},
+{ "network": "2003",
+"MAU": 64.0},
+{ "network": "2004",
+"MAU": 118.0},
+{ "network": "2005",
+"MAU": 114.0},
+{ "network": "2006",
+"MAU": 175.0},
+{ "network": "2007",
+"MAU": 200.0},
+{ "network": "2008",
+"MAU": 264.0},
+{ "network": "2009",
+"MAU": 404.0},
+{ "network": "2010",
+"MAU": 448.0},
+{ "network": "2011",
+"MAU": 438.0},
+{ "network": "2012",
+"MAU": 661.0},
+{ "network": "2013",
+"MAU": 717.0},
+{ "network": "2014",
+"MAU": 672.0},
+{ "network": "2015",
+"MAU": 721.0},
+{ "network": "2016",
+"MAU": 792.0},
+{ "network": "2017",
+"MAU": 819.0},
+{ "network": "2018",
+"MAU": 871.0},
+{ "network": "2019",
+"MAU": 889.0},
+{ "network": "2020",
+"MAU": 997.0},
+  ]
+
+
+
+}); // end am4core.ready()
+</script>
+
+<!-- HTML -->
+<div id="chartdiv"></div>
