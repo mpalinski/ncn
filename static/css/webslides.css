@@ -3789,3 +3789,7 @@ Slides Index
 
 .text-slide-number {
   color: #abc; }
+
+  .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background-color: #33daff;
+  }

@@ -6,7 +6,8 @@
 
     <title>PhD seminar 2020</title>
     <meta name="description" content="">
-
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <!-- URL CANONICAL -->
     <!-- <link rel="canonical" href="http://your-url.com/permalink"> -->
 
@@ -159,8 +160,8 @@
                     <h2>
 User centric internet?
                     </h2>
-                  We do not feel in control of our data. We do not know its real value. As we start to recognize the financial value of
-              their data, we could make different choices about what they share and with whom
+                  We often do not feel in control of our data. We do not know its real value. As we start to recognize the financial value of
+              our data, we could make different choices about what to share and with whom
       </div>
                 </li>
                 <li>
@@ -424,6 +425,69 @@ Topics identified with LDA within the SSRN corpus
   <!-- .end .wrap -->
 </section>
 
+<section>
+        <div class="wrap size-60">
+          <h3>Research idea</h3>
+          <hr>
+          <div class="bg-white shadow">
+            <ul class="flexblock reasons">
+
+              <li>
+                Analyse users' preferences towards co-financing online services with personal data sharing and online activity with discrete choice experiment.
+              </li>
+              <li>
+                Test whether anchoring affects people’s elicited valuations for different types of personal data and digital activities
+              </li>
+              <li>
+                Estimate monetary valuation of privacy in the context of two types of app-mediated services: P2P transportation and P2P accommodation
+              </li>
+              <li>
+                Explore preference heterogeneity in users’ attitudes towards online privacy using HCM
+              </li>
+
+            </ul>
+          </div> <!-- .end .bg-white shadow -->
+        </div>
+        <!-- .end .wrap -->
+        </section>
+
+        <section>
+                <div class="wrap size-60">
+                  <h3>Tested hypotheses</h3>
+                  <hr>
+                  <div class="bg-white shadow">
+                    <ul class="flexblock reasons">
+
+                      <li>
+                    The monetary valuation people place on online privacy will vary across examined contexts: ride hailing and online vacation rental and will depend on the price of the service.
+
+                      </li>
+                      <li>
+                      The monetary value people place on online privacy will vary depending on the type of private information or privacy sensitive actions being considered.
+</li>
+                      <li>
+                        Exposure to a personal privacy breach negatively impacts a person’s willingness to accept the disclosure of private data and increases their monetary valuation of online privacy.
+
+                      </li>
+                      <li>
+                        Privacy concern will explain heterogeneity of preferences towards sharing personal data and performing privacy sensitive actions.
+
+                      </li>
+                      <li>
+                        Knowledge of privacy laws and regulation does have an impact on a person’s privacy preference increasing the monetary valuation of online privacy.
+
+                      </li>
+
+                      <li>
+                        Increasing income has a positive impact on a person’s privacy preference and the valuation of online privacy.
+
+                      </li>
+
+                    </ul>
+                  </div> <!-- .end .bg-white shadow -->
+                </div>
+                <!-- .end .wrap -->
+                </section>
 
         <section>
           <div class="wrap">
@@ -500,7 +564,7 @@ Topics identified with LDA within the SSRN corpus
             </h2>
             <hr>
             <figure>
-              <img src="./static/images/card.png" alt="Control" width="100%">
+              <img src="./static/images/choice-card.png" alt="Choice-card" width="100%">
             </figure>
           <hr>
           <!-- <p>
@@ -513,12 +577,71 @@ Topics identified with LDA within the SSRN corpus
         <section>
           <div class="wrap size-60 zoomIn aligncenter">
             <h2>
-MXL estimation results
+Attributes' levels
             </h2>
             <hr>
-            <figure>
-              <img src="./static/images/res.png" alt="Control" width="100%">
-            </figure>
+            <table class='table-hover'>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Attribute's levels</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="5">Personal data</td>
+      <td>Name</td>
+    </tr>
+    <tr>
+      <td>Birth date</td>
+    </tr>
+    <tr>
+      <td>Social media likes</td>
+    </tr>
+    <tr>
+      <td>Search history</td>
+    </tr>
+    <tr>
+      <td>No data</td>
+    </tr>
+    <tr>
+      <td rowspan="3">Location data</td>
+      <td>Current route</td>
+    </tr>
+    <tr>
+      <td>Routes' history</td>
+    </tr>
+      <tr>
+        <td>No data</td>
+      </tr>
+      <td rowspan="3">Contact data</td>
+      <td>E-mail address</td>
+    </tr>
+    <tr>
+      <td>Phone number</td>
+    </tr>
+    <tr>
+      <td>No data</td>
+    </tr>
+    <tr>
+      <td rowspan="4">User's activity</td>
+      <td>Watching an ad</td>
+    </tr>
+    <tr>
+      <td>Installing an app</td>
+    </tr>
+    <tr>
+      <td>Filling in a survey</td>
+    </tr>
+    <tr>
+      <td>No data</td>
+    </tr>
+    <tr>
+      <td>Discount</td>
+      <td>ride: [0,3,6,9,12], </br> accomodation: [0,6,9,12,15]</td>
+    </tr>
+  </tbody>
+  </table>
           <hr>
           <!-- <p>
 
@@ -531,7 +654,197 @@ MXL estimation results
           <div class="wrap">
             <!-- [class*="content-"] = container max-width:50% = 600px -->
             <div class="content-center">
-              <h3><strong>First conclusions</strong></h3>
+              <h3><strong>Data</strong></h3>
+
+              <ul class="flexblock specs">
+                <li>
+                  <div>
+n=500 respondents
+                </div>
+                </li>
+                <li>
+                <div>
+Geographical coverage: major Polish agglomerations
+</div>
+</li>
+                <li>
+                  <div>
+Condition: respondents who stated that they had used a ride-hailing service (e.g.  Uber or FreeNow)
+      </div>
+                </li>
+                <li>
+                <div>
+Survey conducted in Q3 2020
+      </div>
+      </li>
+      <li>
+      <div>
+  Robustness check: cross-check sample characteristics against Eurobarometer 2019 survey (minor differences)
+</div>
+</li>
+
+      <li>
+        <div>
+
+      </div>
+      </li>
+
+
+              </ul>
+            </div>
+            <!-- end .content-center -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap aligncenter">
+            <p class="text-subtitle">Utility function</p>
+            <!-- <h2></h2> -->
+            <p>\(U_{ij}=\beta_{1i}PD\_{ij}+\beta_{2i}LD\_{ij}+\beta_{3i}CD\_{ij}+\beta_{4i}AR_{ij} +\beta_{5i}Discount\_{ij}+\epsilon_{ij}\)</p>
+          </br>
+          <p>
+            where, \(\beta\) is the vector of parameters associated with their respective variables and \(\epsilon_{ij}\) is a random component of utility associated with alternative \(j\).
+          </p>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section>
+          <div class="wrap size-60 zoomIn aligncenter">
+            <h2>
+MXL estimation results: Ride-hailing scenario
+            </h2>
+            <hr>
+            <table class='table-hover'>
+    <tr>
+        <td>Variable</td>
+        <td>Estimate</td>
+        <td>Std.err.</td>
+        <td>t.ratio(0)</td>
+        <td>Rob.std.err.</td>
+        <td>Rob.t.ratio(0)</td>
+    </tr>
+    <tr>
+        <td>asc_mu</td>
+        <td>-2.7966</td>
+        <td>0.4109</td>
+        <td>-6.81</td>
+        <td>0.4128</td>
+        <td>-6.77</td>
+    </tr>
+    <tr>
+        <td>pd.name_mu</td>
+        <td>-0.3918</td>
+        <td>0.0948</td>
+        <td>-4.13</td>
+        <td>0.1029</td>
+        <td>-3.81</td>
+    </tr>
+    <tr>
+        <td>pd.birth_mu</td>
+        <td>-0.0499</td>
+        <td>0.0866</td>
+        <td>-0.58</td>
+        <td>0.0902</td>
+        <td>-0.55</td>
+    </tr>
+    <tr>
+        <td>pd.fb_mu</td>
+        <td>-0.4956</td>
+        <td>0.1032</td>
+        <td>-4.80</td>
+        <td>0.1072</td>
+        <td>-4.62</td>
+    </tr>
+    <tr>
+        <td>pd.search_mu</td>
+        <td>0.0144</td>
+        <td>0.0934</td>
+        <td>0.15</td>
+        <td>0.1037</td>
+        <td>0.14</td>
+    </tr>
+    <tr>
+        <td>ld.route_mu</td>
+        <td>-0.1423</td>
+        <td>0.0666</td>
+        <td>-2.14</td>
+        <td>0.0624</td>
+        <td>-2.28</td>
+    </tr>
+    <tr>
+        <td>ld.hist_mu</td>
+        <td>0.0221</td>
+        <td>0.0689</td>
+        <td>0.32</td>
+        <td>0.0678</td>
+        <td>0.33</td>
+    </tr>
+    <tr>
+        <td>cd.email_mu</td>
+        <td>-0.3284</td>
+        <td>0.0704</td>
+        <td>-4.66</td>
+        <td>0.0701</td>
+        <td>-4.68</td>
+    </tr>
+    <tr>
+        <td>cd.tel_mu</td>
+        <td>-0.1136</td>
+        <td>0.0732</td>
+        <td>-1.55</td>
+        <td>0.0751</td>
+        <td>-1.51</td>
+    </tr>
+    <tr>
+        <td>ar.app_mu</td>
+        <td>0.3947</td>
+        <td>0.0813</td>
+        <td>4.85</td>
+        <td>0.0836</td>
+        <td>4.72</td>
+    </tr>
+    <tr>
+        <td>ar.ad_mu</td>
+        <td>0.1969</td>
+        <td>0.0781</td>
+        <td>2.52</td>
+        <td>0.0827</td>
+        <td>2.38</td>
+    </tr>
+    <tr>
+        <td>ar.surv_mu</td>
+        <td>0.4959</td>
+        <td>0.0791</td>
+        <td>6.27</td>
+        <td>0.0810</td>
+        <td>6.12</td>
+    </tr>
+    <tr>
+        <td>discount_mu</td>
+        <td>2.0017</td>
+        <td>0.1702</td>
+        <td>11.76</td>
+        <td>0.1745</td>
+        <td>11.47</td>
+    </tr>
+</table>
+          <hr>
+          <p>
+            Model characteristics: </br>
+           LL(final): -433.1053,</br> Rho-square (0):  0.219,</br> Adj.Rho-square (0):  0.1955,</br> AIC:  892.21,</br> BIC: 944.1,</br> n (observations): 400 (3200)
+          </p>
+          </div>
+
+        </section>
+
+        <section>
+          <div class="wrap">
+            <!-- [class*="content-"] = container max-width:50% = 600px -->
+            <div class="content-center">
+              <h3><strong>Main findings</strong></h3>
 
               <ul class="flexblock specs">
                 <li>
