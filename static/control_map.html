@@ -25,8 +25,6 @@ am4core.ready(function() {
 am4core.useTheme(am4themes_animated);
 // Themes end
 
-
-
 var chart = am4core.create("chartdiv", am4maps.MapChart);
 
 
@@ -62,86 +60,87 @@ polygonSeries.useGeodata = true;
 
 // Set heatmap values for each state
 polygonSeries.data = [
+
 {id: "CY",
  value: 81,
 },
 {id: "EE",
- value: 39,
+ value: 71,
 },
 {id: "LT",
- value: 53,
+ value: 78,
 },
 {id: "BG",
- value: 61,
-},
-{id: "RO",
- value: 59,
-},
-{id: "LU",
- value: 64,
-},
-{id: "SI",
  value: 48,
 },
-{id: "HR",
- value: 59,
+{id: "RO",
+ value: 64,
 },
-{id: "AT",
- value: 51,
-},
-{id: "BE",
- value: 67,
-},
-{id: "CZ",
- value: 56,
-},
-{id: "DE",
- value: 59,
-},
-{id: "DK",
- value: 50,
-},
-{id: "EL",
+{id: "LU",
  value: 63,
 },
-{id: "ES",
+{id: "SI",
+ value: 69,
+},
+{id: "HR",
+ value: 74,
+},
+{id: "AT",
+ value: 67,
+},
+{id: "BE",
  value: 65,
 },
+{id: "CZ",
+ value: 68,
+},
+{id: "DE",
+ value: 51,
+},
+{id: "DK",
+ value: 64,
+},
+{id: "EL",
+ value: 71,
+},
+{id: "ES",
+ value: 57,
+},
 {id: "FI",
- value: 62,
+ value: 82,
 },
 {id: "FR",
- value: 72,
+ value: 62,
 },
 {id: "HU",
- value: 55,
+ value: 71,
 },
 {id: "IE",
- value: 75,
+ value: 66,
 },
 {id: "IT",
  value: 66,
 },
 {id: "LV",
- value: 50,
+ value: 67,
 },
 {id: "NL",
- value: 48,
+ value: 71,
 },
 {id: "PL",
- value: 54,
+ value: 78,
 },
 {id: "PT",
- value: 77,
+ value: 85,
 },
 {id: "SE",
- value: 33,
+ value: 71,
 },
 {id: "SK",
- value: 51,
+ value: 77,
 },
 {id: "GB",
- value: 73,
+ value: 75,
 }
 ];
 
@@ -153,16 +152,16 @@ heatLegend.valign = "bottom";
 heatLegend.width = am4core.percent(20);
 heatLegend.valueAxis.renderer.labels.template.fontSize = 14;
 heatLegend.marginRight = am4core.percent(35);
-heatLegend.minValue = 40;
-heatLegend.maxValue = 80;
+heatLegend.minValue = 50;
+heatLegend.maxValue = 90;
 
 // Set up custom heat map legend labels using axis ranges
 var minRange = heatLegend.valueAxis.axisRanges.create();
 minRange.value = heatLegend.minValue;
-minRange.label.text = "30%";
+minRange.label.text = "50%";
 var maxRange = heatLegend.valueAxis.axisRanges.create();
 maxRange.value = heatLegend.maxValue;
-maxRange.label.text = "80%";
+maxRange.label.text = "90%";
 
 // Blank out internal heat legend value axis labels
 heatLegend.valueAxis.renderer.labels.template.adapter.add("text", function(labelText) {
@@ -180,7 +179,7 @@ polygonSeries.include = ['NO','CH','CY','EE','LT','BG','RO','LU','SI','HR','AT',
 
 // Configure series tooltip
 var polygonTemplate = polygonSeries.mapPolygons.template;
-polygonTemplate.tooltipText = "[bold]{name}[\] \n Concerned respondents: {value}%";
+polygonTemplate.tooltipText = "[bold]{name}[\] \n Respondents feeling in control of their data: {value}%";
 polygonTemplate.nonScalingStroke = true;
 polygonTemplate.strokeWidth = 0.5;
 
